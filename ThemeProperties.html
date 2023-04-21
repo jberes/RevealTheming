@@ -1,0 +1,29 @@
+<script type="text/javascript">        
+       
+    $.ig.RevealSdkSettings.setBaseUrl("http://localhost:5111/");   
+    $.ig.RevealSdkSettings.enableNewCharts = true;
+   
+    let revealView;
+
+    $.ig.RVDashboard.loadDashboard("Telecomm Customers").then( dashboard => {
+        revealView = new $.ig.RevealView("#revealView");
+
+        var theme = new $.ig.RevealSdkSettings.theme();
+
+        theme.chartColors
+        theme.accentColor
+        theme.dashboardBackgroundColor
+        theme.visualizationBackgroundColor
+        theme.conditionalFormatting
+        theme.regularFont
+        theme.boldFont
+        theme.mediumFont
+        theme.fontColor
+        theme.highlightColor
+        theme.useRoundedCorners
+
+        $.ig.RevealSdkSettings.theme = theme;
+
+        revealView.dashboard = dashboard;
+    })
+</script>
